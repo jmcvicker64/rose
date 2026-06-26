@@ -1,0 +1,10 @@
+.DS_Store
+.claude/
+*.mov
+
+# photo cleanup tooling (local only)
+review.html
+review-data.js
+review-thumbs/
+review-all.html
+pick.html

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, maximum-scale=1, user-scalable=no" />
+
+  <title>Rose</title>
+  <meta name="description" content="A new picture and a new message, every day." />
+
+  <link rel="manifest" href="manifest.webmanifest" />
+  <meta name="theme-color" content="#c63f73" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="Rose" />
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png" />
+  <link rel="icon" href="icons/icon-192.png" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main id="app" class="screen">
+    <header class="topbar">
+      <button id="prevBtn" class="navchip" aria-label="Previous day">‹</button>
+      <div class="datewrap">
+        <div id="dateLabel" class="datelabel">Today</div>
+        <div id="dateSub" class="datesub"></div>
+      </div>
+      <button id="nextBtn" class="navchip" aria-label="Next day">›</button>
+    </header>
+
+    <section id="card" class="card">
+      <div id="photo" class="photo">
+        <div id="photoFallback" class="photo-fallback" aria-hidden="true">🌹</div>
+        <div id="badge" class="badge" hidden></div>
+      </div>
+      <div class="message-area">
+        <div id="greeting" class="greeting"></div>
+        <p id="message" class="message"></p>
+        <div id="signoff" class="signoff" hidden></div>
+      </div>
+    </section>
+
+    <footer class="bottombar">
+      <button id="todayBtn" class="todaybtn" hidden>Back to today</button>
+      <button id="heartBtn" class="heartbtn" aria-label="Send a little love">💗</button>
+    </footer>
+  </main>
+
+  <div id="hearts" class="hearts" aria-hidden="true"></div>
+
+  <script src="content.js"></script>
+  <script src="photos.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
